@@ -3,14 +3,14 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   const expertiseAreas = [
-    "Microwave Engineering",
-    "Antenna Design & Development",
-    "Radar Systems",
-    "RF Circuit Design",
-    "Electromagnetic Theory",
-    "Defense Technologies",
-    "Satellite Communications",
-    "Signal Processing"
+    "Active Phased Array Antennas",
+    "Wide Band Wide Scanning Antenna Arrays", 
+    "Sparse Antenna Arrays",
+    "T/R Modules & Beamformers",
+    "Array Analysis & Synthesis",
+    "Genetic Algorithms & Particle Swarm Techniques",
+    "Microwave Circuit Development",
+    "Radar System Technologies"
   ];
 
   return (
@@ -37,42 +37,100 @@ const About = () => {
               <div className="prose prose-lg max-w-none">
                 <p className="text-foreground leading-relaxed">
                   Dr. Ashutosh Kedar is a distinguished researcher and expert in microwave engineering 
-                  and antenna systems, with over <strong>15 years of experience</strong> in advancing 
-                  electromagnetic research for both defense and civilian applications.
+                  and antenna systems, with over <strong>20+ years of experience</strong> in advancing 
+                  electromagnetic research for defense applications. He is a <strong>Life Fellow WAMSS</strong>, 
+                  <strong>Fellow IETE</strong>, <strong>Senior Member IEEE</strong>, and <strong>Life Member ACES</strong>.
                 </p>
                 
                 <p className="text-foreground leading-relaxed">
-                  His research focuses on innovative antenna design methodologies, advanced microwave 
-                  circuit development, and cutting-edge radar system technologies. Dr. Kedar has 
-                  contributed significantly to the field through his work on <strong>phased array 
-                  antennas</strong>, <strong>metamaterial structures</strong>, and 
-                  <strong>millimeter-wave systems</strong>.
+                  His research focuses on innovative <strong>active phased array antennas</strong> and 
+                  associated technologies. Dr. Kedar has contributed significantly to the field through 
+                  his work on <strong>wide band wide scanning active phased array antennas</strong>, 
+                  <strong>sparse antenna arrays</strong>, and <strong>T/R modules</strong>.
                 </p>
 
                 <p className="text-foreground leading-relaxed">
-                  Currently serving as a <strong>Principal Research Scientist</strong>, he leads 
-                  interdisciplinary teams in developing next-generation electromagnetic solutions 
-                  for aerospace, defense, and telecommunications industries.
+                  Currently serving as a <strong>Senior Scientist</strong> in Defence R & D Organization, 
+                  Min. of Defence, Govt. of India (2003-till date), he leads activities related to 
+                  wide band wide scanning active phased array antennas for radar applications and 
+                  realization of new active array technologies within the country.
                 </p>
               </div>
 
-              {/* Education */}
-              <Card className="card-elevated">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-academic-navy">Education</h3>
-                  <div className="space-y-3">
-                    <div>
-                      <div className="font-medium text-academic-navy">Ph.D. in Electrical Engineering</div>
-                      <div className="text-academic-grey">Indian Institute of Technology (IIT)</div>
-                      <div className="text-sm text-academic-grey">Specialization: Microwave & Antenna Engineering</div>
+              <div className="space-y-6">
+                {/* Education */}
+                <Card className="card-elevated">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-4 text-academic-navy">Education</h3>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="font-medium text-academic-navy">Ph.D. in Electronic Science</div>
+                        <div className="text-academic-grey">University of Delhi South Campus</div>
+                        <div className="text-sm text-academic-grey">Computer Aided Study of High Temperature Superconducting Microwave Components using Full Wave solvers</div>
+                      </div>
+                      <div>
+                        <div className="font-medium text-academic-navy">M.Tech. in Microwave Electronics</div>
+                        <div className="text-academic-grey">University of Delhi South Campus</div>
+                      </div>
+                      <div>
+                        <div className="font-medium text-academic-navy">M.Sc. in Physics</div>
+                        <div className="text-academic-grey">University of Delhi</div>
+                      </div>
+                      <div>
+                        <div className="font-medium text-academic-navy">B.Sc. (Hons.) Physics</div>
+                        <div className="text-academic-grey">University of Delhi</div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="font-medium text-academic-navy">M.Tech in Electronics & Communication</div>
-                      <div className="text-academic-grey">National Institute of Technology (NIT)</div>
+                  </CardContent>
+                </Card>
+
+                {/* Professional Experience */}
+                <Card className="card-elevated">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-4 text-academic-navy">Professional Experience</h3>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="font-medium text-academic-navy">Senior Scientist</div>
+                        <div className="text-academic-grey">Defence R & D Organization, Min. of Defence, Govt. of India</div>
+                        <div className="text-sm text-academic-grey">2003 - Present</div>
+                      </div>
+                      <div>
+                        <div className="font-medium text-academic-navy">Research Associate</div>
+                        <div className="text-academic-grey">CSIR, India</div>
+                      </div>
+                      <div>
+                        <div className="font-medium text-academic-navy">Lecturer</div>
+                        <div className="text-academic-grey">Dept. of Electronic Science, University of Delhi South Campus</div>
+                        <div className="text-sm text-academic-grey">1999 - 2003</div>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+
+                {/* Professional Associations */}
+                <Card className="card-elevated">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-4 text-academic-navy">Professional Associations</h3>
+                    <div className="space-y-2">
+                      <div className="text-sm text-foreground">
+                        <strong>Chair,</strong> IEEE AP/MTT-S Jt. Chapter Bangalore 2025
+                      </div>
+                      <div className="text-sm text-foreground">
+                        <strong>Vice-Chair,</strong> IEEE AP/MTT-S Jt. Chapter Bangalore 2024
+                      </div>
+                      <div className="text-sm text-foreground">
+                        <strong>Secretary,</strong> IEEE AP/MTT-S Jt. Chapter Bangalore 2022-23
+                      </div>
+                      <div className="text-sm text-foreground">
+                        <strong>Execom Member,</strong> IEEE Bangalore Section, 2022 onwards
+                      </div>
+                      <div className="text-sm text-foreground">
+                        <strong>ExeCOM Member</strong> – MAPCON, WAMSS, IEEE Bangalore Section
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
 

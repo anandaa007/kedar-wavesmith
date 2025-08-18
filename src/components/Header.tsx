@@ -6,18 +6,22 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href: "/" },
     { name: "About", href: "#about" },
-    { name: "Research", href: "#research" },
-    { name: "Publications", href: "#publications" },
+    { name: "Research", href: "/research" },
+    { name: "Publications", href: "/publications" },
     { name: "Awards", href: "#awards" },
     { name: "Contact", href: "#contact" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const handleNavigation = (href: string) => {
+    if (href.startsWith("#")) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = href;
     }
     setIsMenuOpen(false);
   };
@@ -36,7 +40,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item.href)}
                 className="academic-link text-sm font-medium hover:text-primary transition-colors"
               >
                 {item.name}
@@ -62,7 +66,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item.href)}
                   className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors w-full text-left"
                 >
                   {item.name}
