@@ -9,32 +9,53 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 27%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 214 84% 56%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 95%;
+    --secondary-foreground: 215 25% 27%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 20% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 214 84% 56%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 214 84% 56%;
+    
+    /* Academic Design System */
+    --academic-navy: 214 40% 25%;
+    --academic-blue: 214 84% 56%;
+    --academic-light-blue: 214 100% 95%;
+    --academic-grey: 215 15% 65%;
+    --academic-light-grey: 215 20% 95%;
+    --academic-success: 142 72% 29%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--academic-navy)), hsl(var(--academic-blue)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--academic-light-grey)));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 8px hsl(var(--academic-grey) / 0.1);
+    --shadow-medium: 0 4px 16px hsl(var(--academic-grey) / 0.15);
+    --shadow-strong: 0 8px 32px hsl(var(--academic-grey) / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -101,5 +122,73 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  /* Academic Component Styles */
+  .hero-section {
+    background: var(--gradient-hero);
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .card-elevated {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition-smooth);
+  }
+  
+  .card-elevated:hover {
+    box-shadow: var(--shadow-strong);
+    transform: translateY(-2px);
+  }
+  
+  .section-title {
+    color: hsl(var(--academic-navy));
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+  
+  .academic-link {
+    color: hsl(var(--academic-blue));
+    transition: var(--transition-smooth);
+    position: relative;
+  }
+  
+  .academic-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: hsl(var(--academic-blue));
+    transform: scaleX(0);
+    transition: var(--transition-smooth);
+    transform-origin: right;
+  }
+  
+  .academic-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .expertise-badge {
+    background: hsl(var(--academic-light-blue));
+    color: hsl(var(--academic-navy));
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: var(--transition-bounce);
+  }
+  
+  .expertise-badge:hover {
+    background: hsl(var(--academic-blue));
+    color: hsl(var(--primary-foreground));
+    transform: scale(1.05);
   }
 }
