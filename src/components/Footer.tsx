@@ -31,18 +31,40 @@ const Footer = () => {
                   Email
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/dr-ashutosh-kedar-968924a/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center text-blue-200 hover:text-white transition-colors"
                 >
                   <Linkedin className="h-4 w-4 mr-2" />
                   LinkedIn
                 </a>
                 <a 
-                  href="#" 
+                  href="https://scholar.google.com/citations?user=o17igLEAAAAJ&hl=en" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center text-blue-200 hover:text-white transition-colors"
                 >
                   <ExternalLink className="h-4 w-4 mr-2" />
                   Google Scholar
+                </a>
+                <a 
+                  href="https://ieeexplore.ieee.org/author/37723771300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-blue-200 hover:text-white transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  IEEE Xplore
+                </a>
+                <a 
+                  href="https://www.researchgate.net/profile/Ashutosh-Kedar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-blue-200 hover:text-white transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  ResearchGate
                 </a>
               </div>
             </div>

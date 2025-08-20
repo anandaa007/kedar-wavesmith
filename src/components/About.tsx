@@ -37,32 +37,13 @@ const About = () => {
             <div className="space-y-6">
               <div className="prose prose-lg max-w-none">
                 <p className="text-foreground leading-relaxed">
-                  Dr. Ashutosh Kedar is a distinguished researcher and expert in microwave engineering 
-                  and antenna systems, with over <strong>20+ years of experience</strong> in advancing 
-                  electromagnetic research for defense applications. He is a <strong>Life Fellow WAMSS</strong>, 
-                  <strong>Fellow IETE</strong>, <strong>Senior Member IEEE</strong>, and <strong>Life Member ACES</strong>.
+                  Dr. Ashutosh Kedar is a distinguished scientist and researcher in microwave engineering, antenna systems, and electromagnetic applications, with over two decades of experience in advancing radar and defense technologies. He earned his Ph.D. in Electronics Science, M.Tech. in Microwave Electronics, M.Sc. in Physics, and B.Sc. in Physics from the University of Delhi, India. Before joining the Defence R & D Organization (DRDO) in 2003, he served as a Lecturer at the University of Delhi and as a Research Associate at CSIR. At DRDO, he currently serves as a Senior Scientist, leading the development of wide band wide scanning active phased array antennas, sparse arrays, T/R modules, and advanced radar technologies.
                 </p>
-                
                 <p className="text-foreground leading-relaxed">
-                  His research focuses on innovative <strong>active phased array antennas</strong> and 
-                  associated technologies. Dr. Kedar has contributed significantly to the field through 
-                  his work on <strong>wide band wide scanning active phased array antennas</strong>, 
-                  <strong>sparse antenna arrays</strong>, and <strong>T/R modules</strong>.
+                  His research interests include active phased array antennas, computational electromagnetics, and evolutionary optimization techniques such as Genetic Algorithms and Particle Swarm Optimization. He has authored over 100 research papers, holds a patent on a radiating element for active phased arrays, and is the author of the book <em>Sparse Phased Array Antennas: Theory and Applications</em> (Artech House). He has received numerous honors, including the IETE Hari Ramji Toshniwal Award 2023, the IETE CDIL Best Paper Award 2024, and several Best Paper Awards at international conferences such as ICMARS, ATMS, and WAMS.
                 </p>
-
                 <p className="text-foreground leading-relaxed">
-                  Currently serving as a <strong>Senior Scientist</strong> in Defence R & D Organization, 
-                  Min. of Defence, Govt. of India (2003-till date), he leads activities related to 
-                  wide band wide scanning active phased array antennas for radar applications and 
-                  realization of new active array technologies within the country.
-                </p>
-
-                <p className="text-foreground leading-relaxed">
-                  Leading activities related to wide band wide scanning active phased array antennas for radar applications. 
-                  Design and development of state of the art technology related to wide band wide scanning sparse antenna arrays. 
-                  Realization of new active array technologies like T/R modules, beamformers, antenna arrays, etc within country. 
-                  Software development for array analysis and synthesis using evolutionary optimization techniques esp. 
-                  Genetic algorithms and Particle Swarm techniques.
+                  Dr. Kedar is a Life Fellow of WAMSS, Fellow of IETE, Senior Member of IEEE, Life Member of ACES, and Member of AMTA. He actively contributes to the professional community, serving on review boards of leading IEEE journals and holding leadership roles in the IEEE AP/MTT-S Joint Chapter Bangalore, where he currently serves as Chair. He has also played key roles in major international conferences, including MAPCON, IEEE SPACE, and Connect, and continues to be recognized globally for his contributions, including a listing in Asia’s Who’s Who.
                 </p>
               </div>
             </div>

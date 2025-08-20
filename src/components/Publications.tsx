@@ -128,30 +128,6 @@ const Publications = () => {
                 </ul>
               </CardContent>
             </Card>
-
-            <Card className="card-elevated">
-              <CardHeader>
-                <CardTitle className="text-xl text-academic-navy">Academic Profiles</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <Button variant="outline" className="w-full justify-start">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Google Scholar Profile
-                </Button>
-                <Button variant="outline" className="w-full justify-start">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  ResearchGate
-                </Button>
-                <Button variant="outline" className="w-full justify-start">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  IEEE Xplore
-                </Button>
-                <Button variant="outline" className="w-full justify-start">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  ORCID Profile
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
