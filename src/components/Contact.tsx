@@ -11,9 +11,9 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="section-title text-center mb-16">Contact & Collaboration</h2>
           
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center justify-center">
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-8 items-center justify-center">
               <div>
                 <h3 className="text-2xl font-bold text-academic-navy mb-6">Get in Touch</h3>
                 <p className="text-foreground leading-relaxed mb-6">
@@ -75,68 +75,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
-            {/* Contact Form */}
-            <Card className="card-elevated">
-              <CardHeader>
-                <CardTitle className="text-xl text-academic-navy">Send a Message</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium text-academic-navy mb-2 block">
-                      First Name
-                    </label>
-                    <Input placeholder="John" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium text-academic-navy mb-2 block">
-                      Last Name
-                    </label>
-                    <Input placeholder="Doe" />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="text-sm font-medium text-academic-navy mb-2 block">
-                    Email Address
-                  </label>
-                  <Input type="email" placeholder="john.doe@example.com" />
-                </div>
-                
-                <div>
-                  <label className="text-sm font-medium text-academic-navy mb-2 block">
-                    Organization
-                  </label>
-                  <Input placeholder="Your Institution/Company" />
-                </div>
-                
-                <div>
-                  <label className="text-sm font-medium text-academic-navy mb-2 block">
-                    Subject
-                  </label>
-                  <Input placeholder="Research Collaboration Inquiry" />
-                </div>
-                
-                <div>
-                  <label className="text-sm font-medium text-academic-navy mb-2 block">
-                    Message
-                  </label>
-                  <Textarea 
-                    placeholder="Please describe your inquiry, research interests, or collaboration ideas..."
-                    rows={5}
-                  />
-                </div>
-                
-                <Button className="w-full">
-                  Send Message
-                </Button>
-                
-                <p className="text-xs text-academic-grey text-center">
-                  I'll typically respond within 24-48 hours during business days.
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
