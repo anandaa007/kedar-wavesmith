@@ -38,7 +38,7 @@ const Hero = () => {
           <p className="text-xl md:text-2xl mb-4 text-white/90">
             Microwave & Antenna Engineering Researcher
           </p>
-          <p className="hidden md:block text-lg md:text-xl mb-8 text-white/90 max-w-3xl md:mx-0 mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl mb-8 text-white/90 max-w-3xl md:mx-0 mx-auto leading-relaxed text-center md:text-left">
             Advancing the frontiers of electromagnetic research through innovative antenna design, 
             microwave systems, and radar technology for defense and civilian applications.
           </p>
