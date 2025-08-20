@@ -253,14 +253,10 @@ const About = () => {
                         <div className="text-xs text-white/80 mb-3">
                           <span className="font-medium">{pub.journal}</span> • {pub.volume} • {pub.year}
                         </div>
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-start">
                           <span className="text-xs px-2 py-1 bg-academic-light-blue text-academic-navy rounded-full">
                             {pub.type}
                           </span>
-                          <Button size="sm" className="text-xs h-7">
-                            <FileText className="h-3 w-3 mr-1" />
-                            View Paper
-                          </Button>
                         </div>
                       </CardContent>
                     </Card>

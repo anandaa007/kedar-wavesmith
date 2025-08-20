@@ -42,7 +42,11 @@ const Contact = () => {
               <div className="text-center w-full">
                 <h4 className="text-lg font-semibold text-academic-navy mb-4">Professional Networks</h4>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <Button variant="outline" className="flex items-center justify-center space-x-2 h-auto p-3">
+                  <Button 
+                    variant="outline" 
+                    className="flex items-center justify-center space-x-2 h-auto p-3"
+                    onClick={() => window.open('https://www.linkedin.com/in/dr-ashutosh-kedar-968924a/', '_blank')}
+                  >
                     <Linkedin className="h-4 w-4" />
                     <div className="text-center">
                       <div className="text-sm font-medium">LinkedIn</div>
@@ -65,17 +69,21 @@ const Contact = () => {
               <div className="text-center w-full mt-8">
                 <h4 className="text-lg font-semibold text-academic-navy mb-4">Academic Profiles</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <Button variant="outline" className="w-full justify-start h-12">
+                  <Button 
+                    variant="outline" 
+                    className="w-full justify-start h-12"
+                    onClick={() => window.open('https://www.researchgate.net/profile/Ashutosh-Kedar', '_blank')}
+                  >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     ResearchGate
                   </Button>
-                  <Button variant="outline" className="w-full justify-start h-12">
+                  <Button 
+                    variant="outline" 
+                    className="w-full justify-start h-12"
+                    onClick={() => window.open('https://ieeexplore.ieee.org/author/37723771300', '_blank')}
+                  >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     IEEE Xplore
-                  </Button>
-                  <Button variant="outline" className="w-full justify-start h-12">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    ORCID Profile
                   </Button>
                 </div>
               </div>

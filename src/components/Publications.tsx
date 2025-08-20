@@ -8,8 +8,9 @@ import { ExternalLink, FileText, Award, BookOpen } from "lucide-react";
 const Publications = () => {
   const [showAllConferences, setShowAllConferences] = useState(false);
 
-  const featuredPublications = [
+  const allJournalPublications = [
     {
+      id: 1,
       title: "On the Application of Radon Transformation for the Synthesis of Thinned Planar Antenna Arrays",
       authors: "Ashutosh Kedar, P. Vangol and A. Mahesh",
       journal: "IEEE Transactions on Antennas and Propagation",
@@ -18,30 +19,270 @@ const Publications = () => {
       type: "Journal Article"
     },
     {
+      id: 2,
       title: "Hybridization of Bayesian Compressive Sensing and Array Dilation Technique for Synthesis of Linear Isophoric Sparse Antenna Arrays",
       authors: "Ashutosh Kedar, P. Vangol and Mahesh A.",
       journal: "IEEE Transactions on Antennas and Propagation",
       year: "2023",
-      volume: "vol. 71",
+      volume: "vol. 71, 28 Feb 2023",
       type: "Journal Article"
     },
     {
+      id: 3,
+      title: "Glimpses From the IEEE Microwave, Antenna and Propagation Conference (MAPCON-2022)",
+      authors: "A Kedar, C Kumar, PK Mishra",
+      journal: "IEEE Microwave Magazine",
+      year: "2022",
+      volume: "[Conference Report]",
+      type: "Journal Article"
+    },
+    {
+      id: 4,
+      title: "Antenna Array Performance Diagnostics Using Theory of Collapsed distributions",
+      authors: "Ashutosh Kedar",
+      journal: "IETE Journal of Research",
+      year: "2022",
+      volume: "June 2022",
+      type: "Journal Article"
+    },
+    {
+      id: 5,
+      title: "Design guidelines using theory of characteristic modes for a broad band and broad beam SIW cavity backed microstrip antennas",
+      authors: "Ashutosh Kedar",
+      journal: "Microwave Journal",
+      year: "2022",
+      volume: "March 2022",
+      type: "Journal Article"
+    },
+    {
+      id: 6,
+      title: "How Complex Phased Array Antennas and Platforms Interact",
+      authors: "Ashutosh Kedar",
+      journal: "Ansys Advantage Journal",
+      year: "2021",
+      volume: "",
+      type: "Journal Article"
+    },
+    {
+      id: 7,
+      title: "Tutorial and research trends in antenna technology",
+      authors: "Ashutosh Kedar",
+      journal: "Microwave Journal",
+      year: "2021",
+      volume: "",
+      type: "Journal Article"
+    },
+    {
+      id: 8,
       title: "Deterministic Synthesis of Wide Scanning Linear Sparse Antenna Arrays",
       authors: "Ashutosh Kedar",
-      journal: "IEEE Transactions on Antennas and Propagation",
+      journal: "IEEE Trans. on Antennas Propagat",
       year: "2020",
       volume: "vol. 67, no.2, pp. 905-914",
       type: "Journal Article"
     },
     {
+      id: 9,
       title: "Deterministic Synthesis of Wide Scanning Sparse Concentric Ring Antenna Arrays",
       authors: "Ashutosh Kedar",
       journal: "IEEE Transactions on Antennas and Propagation",
-      year: "2019", 
+      year: "2019",
       volume: "vol. 67, No.12, pp.7387-7395",
+      type: "Journal Article"
+    },
+    {
+      id: 10,
+      title: "Dielectric Free Wide Scan UWB Low Cross-Pol Metallic Vivaldi Antenna for Active Phased Array Radars",
+      authors: "Ashutosh Kedar",
+      journal: "IETE Journal of Research",
+      year: "2019",
+      type: "Journal Article",
+      doi: "10.1080/03772063.2019.1617201"
+    },
+    {
+      id: 11,
+      title: "Wide Scanning Characteristics of Sparse Phased Array Antennas Using an Analytical Expression for Directivity",
+      authors: "Ashutosh Kedar and L.P. Ligthart",
+      journal: "IEEE Trans. on Antennas Propagat.",
+      year: "2019",
+      volume: "Vol. 67, No. 2, pp. 905-915",
+      type: "Journal Article"
+    },
+    {
+      id: 12,
+      title: "A Wide Band Wide Scan Low Cross Polarized Grooved Tapered Slot Antenna Array",
+      authors: "Ashutosh Kedar",
+      journal: "IET Microwave Antennas & propagation",
+      year: "2019",
+      volume: "Vol. 13, No.2, pp. 178-184, Feb. 2019",
+      type: "Journal Article"
+    },
+    {
+      id: 13,
+      title: "Design and Development of Low Cost Low Sidelobe Level Slotted Waveguide Antenna Array in X-Band",
+      authors: "Pramod Kumar, Ashutosh Kedar and Anil K. Singh",
+      journal: "IEEE Trans. on Antennas Propagat",
+      year: "2015",
+      volume: "vol. 63, 11, pp. 4723-4731, Nov 2015",
+      type: "Journal Article"
+    },
+    {
+      id: 14,
+      title: "A Waveguide-Fed Pyramid-Shaped Dielectric Rod Antenna with Size Reduction and High Gain for Wideband Applications",
+      authors: "Ashutosh Kedar and Anil K. Singh",
+      journal: "Progress In Electromagnetics Research C",
+      year: "2014",
+      volume: "Vol. 52, 63-69",
+      type: "Journal Article"
+    },
+    {
+      id: 15,
+      title: "CAD of wideband printed transmission line transformers using particle swarm optimisation",
+      authors: "Ashutosh Kedar and A.K. Singh",
+      journal: "Int. J. Swarm Intelligence",
+      year: "2014",
+      volume: "Vol. 1, No. 2, pp.193–208",
+      type: "Journal Article"
+    },
+    {
+      id: 16,
+      title: "Wide beam tapered slot antenna for wide angle scanning phased array antenna",
+      authors: "Ashutosh Kedar and K.S. Beenamole",
+      journal: "Progress In Electromagnetics Research B",
+      year: "2011",
+      volume: "Vol. 27, 235-251",
+      type: "Journal Article"
+    },
+    {
+      id: 17,
+      title: "Wide Band Low Profile Linear Microstrip Antenna Array with Cosecant Squared Shaped Beam Pattern",
+      authors: "Ashutosh Kedar, Prem Kutiyal, Mahima Garg and U.K. Revankar",
+      journal: "Microwave and Optical Technology Letters",
+      year: "2007",
+      volume: "vol.49, no.4, April 2007, 963-965. (Citations 4)",
+      type: "Journal Article"
+    },
+    {
+      id: 18,
+      title: "Parametric Study of flat sandwich multilayer radome",
+      authors: "Ashutosh Kedar and U.K. Revankar",
+      journal: "Progress In Electromagnetic Research, PIER 66",
+      year: "2006",
+      volume: "253-265",
+      type: "Journal Article"
+    },
+    {
+      id: 19,
+      title: "Performance appraisal of active phased array in presence of multilayer flat sandwich radome",
+      authors: "Ashutosh Kedar, K.S. Beenamole and U.K. Revankar",
+      journal: "Progress In Electromagnetic Research, PIER 66",
+      year: "2006",
+      volume: "157-171",
+      type: "Journal Article"
+    },
+    {
+      id: 20,
+      title: "Efficient Analysis for Nonlinear Microwave Characteristics of High-Power HTS Thin Film Microstrip Resonators",
+      authors: "Ashutosh Kedar and N.D. Kataria",
+      journal: "Superconductor Sci. Tech",
+      year: "2005",
+      volume: "18, 2005, 1-6",
+      type: "Journal Article"
+    },
+    {
+      id: 21,
+      title: "Spectral Domain Modeling of Superconducting Transmission Lines and Resonators",
+      authors: "Ashutosh Kedar, N.D. Kataria and K.K. Gupta",
+      journal: "Microwave and Optical Technology Letters",
+      year: "2004",
+      volume: "vol.41, no.1, April 2004, 55-59. (Citations 1)",
+      type: "Journal Article"
+    },
+    {
+      id: 22,
+      title: "Optimization of Substrate Thickness in Gaas Mmics for High Frequency Applications: Using a Microstrip Line",
+      authors: "J.P. Thakur, A.K. Pandey, Ashutosh Kedar, K.K. Gupta and H.P. Vyas",
+      journal: "Microwave and Optical Technology Letters",
+      year: "2004",
+      volume: "vol.41, no.1, April 2004, 55-59",
+      type: "Journal Article"
+    },
+    {
+      id: 23,
+      title: "Characterisation and Analysis of High Temperature Superconducting Microstrip and Coplanar Resonators Using a Spectral Domain Method",
+      authors: "Ashutosh Kedar, N.D. Kataria and K.K. Gupta",
+      journal: "Superconductor Sci. Tech",
+      year: "2004",
+      volume: "17, 2004, 823-827",
+      type: "Journal Article"
+    },
+    {
+      id: 24,
+      title: "Modelling of GaAs-Mmic Microstrip Line up to 40 GHz",
+      authors: "J.P. Thakur, A.K. Pandey, Ashutosh Kedar, K.K. Gupta and H.P. Vyas",
+      journal: "International journal of RF & Microwave Computer Aided Engineering",
+      year: "2004",
+      volume: "vol. 14, No. 5, September 2004, 475-482",
+      type: "Journal Article"
+    },
+    {
+      id: 25,
+      title: "CAD analysis of HTS Microstrip Patch Antennas using Spectral Domain Method",
+      authors: "Ashutosh Kedar, K.K. Gupta, G.P. Srivastava and N.D. Kataria",
+      journal: "Electromagnetics",
+      year: "2003",
+      volume: "vol. 7, July 2003",
+      type: "Journal Article"
+    },
+    {
+      id: 26,
+      title: "Accurate Computer Aided Modelling of Multilayer GaAs Microstrip Lines using a Spectral Domain Method",
+      authors: "J. P. Thakur, Ashutosh Kedar, A.K. Pandey, K.K. Gupta and H.P. Vyas",
+      journal: "Microwave and Optical Technology Letters",
+      year: "2003",
+      volume: "vol.39, no.2, October 2003, 169-172",
+      type: "Journal Article"
+    },
+    {
+      id: 27,
+      title: "Full-Wave Modeling of Non-Linear Power Dependence of High-Tc Superconducting Microstrip Resonators",
+      authors: "Ashutosh Kedar, N.D. Kataria and K.K. Gupta",
+      journal: "Electronics Letters",
+      year: "2003",
+      volume: "vol. 39, no. 23, 2003, 1660-1661",
+      type: "Journal Article"
+    },
+    {
+      id: 28,
+      title: "Accurate Full Wave Estimation of Quality Factor and Resonance Frequency of HTS Microstrip Resonator",
+      authors: "Ashutosh Kedar, N.D. Kataria, Mukul Misra, K.K. Gupta and G.P. Srivastava",
+      journal: "Electronics Letters",
+      year: "2002",
+      volume: "vol.32, no.1, January 2002, 32-34",
+      type: "Journal Article"
+    },
+    {
+      id: 29,
+      title: "Modeling of HTS Microstrip Resonator by Spectral Domain Method: Comparison with Experimental Results",
+      authors: "Ashutosh Kedar, N.D. Kataria, Mukul Misra and K.K. Gupta",
+      journal: "Singapore Journal of Physics",
+      year: "2002",
+      volume: "vol.18, no.1, July 2002, 139-145",
+      type: "Journal Article"
+    },
+    {
+      id: 30,
+      title: "Parametric and Temperature-Sensitivity Study of Resonance Frequency of Microstrip Antennas using Spectral Domain Method",
+      authors: "Ashutosh Kedar, K.K. Gupta, G.P. Srivastava and N.D. Kataria",
+      journal: "Microwave and Optical Technology Letters",
+      year: "2001",
+      volume: "vol.30, no.4, August 2001, 276-280",
       type: "Journal Article"
     }
   ];
+
+  const [showAllJournals, setShowAllJournals] = useState(false);
+  const displayedJournals = showAllJournals ? allJournalPublications : allJournalPublications.slice(0, 4);
 
   const publicationStats = [
     { number: "100+", label: "Published Papers" },
@@ -827,43 +1068,63 @@ const Publications = () => {
           </div>
         </section>
 
-        {/* Featured Publications */}
+        {/* Journal Details */}
         <section className="py-20 bg-academic-light-grey">
           <div className="container mx-auto px-4 lg:px-6">
             <div className="max-w-6xl mx-auto">
               <h2 className="section-title text-center mb-16">Journal Details</h2>
-              <div className="space-y-6">
-                {featuredPublications.map((pub, index) => (
-                  <Card key={index} className="card-elevated">
-                    <CardHeader>
-                      <div className="flex items-start justify-between">
+              <div className="space-y-4">
+                {displayedJournals.map((pub, index) => (
+                  <Card key={pub.id} className="card-elevated">
+                    <CardContent className="p-6">
+                      <div className="flex flex-col md:flex-row md:items-start justify-between mb-3">
                         <div className="flex-1">
-                          <CardTitle className="text-lg text-academic-navy mb-2">{pub.title}</CardTitle>
-                          <div className="text-sm text-academic-grey mb-2">
-                            <span className="font-medium">{pub.authors}</span>
-                          </div>
-                          <div className="text-sm text-academic-grey mb-3">
-                            <span className="font-medium">{pub.journal}</span> • {pub.volume} • {pub.year}
-                          </div>
-                          <div className="flex items-center space-x-4 text-xs">
-                            <span className="flex items-center">
-                              <FileText className="h-3 w-3 mr-1" />
-                              {pub.type}
+                          <div className="flex items-start gap-3 mb-2">
+                            <span className="text-sm font-bold text-academic-blue bg-academic-light-blue px-2 py-1 rounded-full min-w-[2rem] text-center">
+                              {pub.id}
                             </span>
+                            <div className="flex-1">
+                              <h4 className="text-lg font-semibold text-white mb-1">{pub.title}</h4>
+                              <div className="text-white/80 text-sm mb-1">
+                                <span className="font-medium">{pub.authors}</span>
+                              </div>
+                              <div className="text-white/80 text-sm">
+                                <span className="font-medium">{pub.journal}</span>
+                                {pub.volume && ` • ${pub.volume}`} • {pub.year}
+                                {pub.doi && (
+                                  <div className="text-xs text-white/60 mt-1">
+                                    DOI: <a 
+                                      href={`https://doi.org/${pub.doi}`}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-academic-light-blue hover:text-white underline hover:no-underline transition-colors duration-200"
+                                    >
+                                      {pub.doi}
+                                    </a>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex flex-wrap gap-2">
-                        <Button size="sm" className="text-xs">
-                          <ExternalLink className="h-3 w-3 mr-1" />
-                          View Paper
-                        </Button>
+                        <span className="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full font-medium mt-2 md:mt-0">
+                          {pub.type}
+                        </span>
                       </div>
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+              
+              {/* View More Button for Journals */}
+              <div className="flex justify-center mt-12 mb-8">
+                <Button 
+                  onClick={() => setShowAllJournals(!showAllJournals)}
+                  size="lg"
+                  className="bg-academic-blue hover:bg-academic-blue/90 text-blue-800"
+                >
+                  {showAllJournals ? 'View Less Papers' : `View More Papers (${allJournalPublications.length - 4} remaining)`}
+                </Button>
               </div>
             </div>
           </div>
