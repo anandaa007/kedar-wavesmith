@@ -45,6 +45,14 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 md:justify-start justify-center items-center">
             <Button 
+              size="lg" 
+              className="bg-white text-primary hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+              onClick={() => navigate('/publications')}
+            >
+              <ExternalLink className="mr-2 h-5 w-5" />
+              View Publications
+            </Button>
+            <Button 
               variant="outline" 
               size="lg" 
               className="border-white text-white bg-black/20 hover:bg-white hover:text-black transition-all duration-300 hover:border-white w-full sm:w-auto"
