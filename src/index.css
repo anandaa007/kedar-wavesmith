@@ -134,7 +134,8 @@ All colors MUST be HSL.
   }
   
   .card-elevated {
-    background: var(--gradient-card);
+    background: hsl(var(--academic-navy));
+    color: white;
     box-shadow: var(--shadow-medium);
     transition: var(--transition-smooth);
   }
@@ -142,6 +143,7 @@ All colors MUST be HSL.
   .card-elevated:hover {
     box-shadow: var(--shadow-strong);
     transform: translateY(-2px);
+    background: hsl(var(--academic-navy));
   }
   
   .section-title {

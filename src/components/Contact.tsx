@@ -8,13 +8,13 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-academic-light-grey">
       <div className="container mx-auto px-4 lg:px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <h2 className="section-title text-center mb-16">Contact & Collaboration</h2>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center justify-center">
+          <div className="flex justify-center">
             {/* Contact Information */}
-            <div className="space-y-8 items-center justify-center">
-              <div>
+            <div className="space-y-8 flex flex-col items-center justify-center w-full">
+              <div className="text-center">
                 <h3 className="text-2xl font-bold text-academic-navy mb-6">Get in Touch</h3>
                 <p className="text-foreground leading-relaxed mb-6">
                   I'm always open to discussing research collaborations, speaking opportunities, 
@@ -23,53 +23,42 @@ const Contact = () => {
               </div>
 
               {/* Contact Details */}
-              <div className="space-y-4">
+              <div className="space-y-4 w-full">
                 <Card className="card-elevated">
                   <CardContent className="p-4">
-                    <div className="flex items-center space-x-4">
+                    <div className="flex flex-col items-center space-y-2">
                       <div className="p-3 rounded-lg bg-academic-light-blue text-academic-blue">
                         <Mail className="h-5 w-5" />
                       </div>
-                      <div>
-                        <div className="font-medium text-academic-navy">Email</div>
-                        <div className="text-academic-grey">ashutosh.kedar@institution.edu</div>
+                      <div className="text-center">
+                        <div className="font-medium text-white">Email</div>
+                        <div className="text-white/80">ashutosh.kedar@institution.edu</div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="card-elevated">
-                  <CardContent className="p-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="p-3 rounded-lg bg-academic-light-blue text-academic-blue">
-                        <Phone className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <div className="font-medium text-academic-navy">Office Phone</div>
-                        <div className="text-academic-grey">+91 (XXX) XXX-XXXX</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
 
               </div>
 
               {/* Professional Links */}
-              <div>
+              <div className="text-center w-full">
                 <h4 className="text-lg font-semibold text-academic-navy mb-4">Professional Networks</h4>
-                <div className="grid grid-cols-2 gap-3">
-                  <Button variant="outline" className="justify-start h-auto p-3">
-                    <Linkedin className="h-4 w-4 mr-2" />
-                    <div className="text-left">
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <Button variant="outline" className="flex items-center justify-center space-x-2 h-auto p-3">
+                    <Linkedin className="h-4 w-4" />
+                    <div className="text-center">
                       <div className="text-sm font-medium">LinkedIn</div>
-                      <div className="text-xs text-academic-grey">Professional Profile</div>
                     </div>
                   </Button>
-                  <Button variant="outline" className="justify-start h-auto p-3">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    <div className="text-left">
+                  <Button
+                    variant="outline"
+                    className="flex items-center justify-center space-x-2 h-auto p-3"
+                    onClick={() => window.open('https://scholar.google.com/citations?user=o17igLEAAAAJ&hl=en', '_blank')}
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    <div className="text-center">
                       <div className="text-sm font-medium">Google Scholar</div>
-                      <div className="text-xs text-academic-grey">Publications</div>
                     </div>
                   </Button>
                 </div>

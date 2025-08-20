@@ -34,8 +34,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg">
-      <div className="container mx-auto px-4 lg:px-6">
+      <header className="fixed w-full top-0 z-50 bg-[hsl(var(--academic-navy))]">      <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
           <div className="font-bold text-xl text-white drop-shadow-lg">
