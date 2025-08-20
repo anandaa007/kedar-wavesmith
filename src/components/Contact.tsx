@@ -36,8 +36,6 @@ const Contact = () => {
                     </div>
                   </CardContent>
                 </Card>
-
-
               </div>
 
               {/* Professional Links */}
@@ -59,6 +57,25 @@ const Contact = () => {
                     <div className="text-center">
                       <div className="text-sm font-medium">Google Scholar</div>
                     </div>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Academic Profiles */}
+              <div className="text-center w-full mt-8">
+                <h4 className="text-lg font-semibold text-academic-navy mb-4">Academic Profiles</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <Button variant="outline" className="w-full justify-start h-12">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    ResearchGate
+                  </Button>
+                  <Button variant="outline" className="w-full justify-start h-12">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    IEEE Xplore
+                  </Button>
+                  <Button variant="outline" className="w-full justify-start h-12">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    ORCID Profile
                   </Button>
                 </div>
               </div>
