@@ -52,23 +52,6 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="card-elevated">
-                  <CardContent className="p-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="p-3 rounded-lg bg-academic-light-blue text-academic-blue">
-                        <MapPin className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <div className="font-medium text-academic-navy">Office Address</div>
-                        <div className="text-academic-grey">
-                          Department of Electronics & Communication<br />
-                          Research Institution<br />
-                          City, State, India
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
               </div>
 
               {/* Professional Links */}

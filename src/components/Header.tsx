@@ -18,10 +18,16 @@ const Header = () => {
     if (href.startsWith("#")) {
       const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     } else {
-      window.location.href = href;
+      // Use pushState for faster navigation without page reload
+      if (href === "/") {
+        window.history.pushState({}, "", href);
+        window.location.reload();
+      } else {
+        window.location.href = href;
+      }
     }
     setIsMenuOpen(false);
   };

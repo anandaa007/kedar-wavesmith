@@ -37,7 +37,7 @@ const Hero = () => {
               <ExternalLink className="mr-2 h-5 w-5" />
               View Publications
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300">
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:border-white">
               <Download className="mr-2 h-5 w-5" />
               Download CV
             </Button>

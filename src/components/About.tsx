@@ -22,7 +22,7 @@ const About = () => {
           {/* First Row: Profile Image and Bio */}
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             {/* Profile Image */}
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-center lg:justify-start lg:items-center">
               <div className="relative">
                 <img
                   src={profilePhoto}

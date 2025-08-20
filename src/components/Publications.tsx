@@ -105,16 +105,6 @@ const Publications = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-foreground mb-4 leading-relaxed">{pub.abstract}</p>
-                    <div className="flex flex-wrap gap-2">
-                      <Button size="sm" className="text-xs">
-                        <ExternalLink className="h-3 w-3 mr-1" />
-                        View Paper
-                      </Button>
-                      <Button variant="outline" size="sm" className="text-xs">
-                        <FileText className="h-3 w-3 mr-1" />
-                        Citation
-                      </Button>
-                    </div>
                   </CardContent>
                 </Card>
               ))}
