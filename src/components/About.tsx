@@ -14,10 +14,10 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-academic-light-blue to-white">
+    <section id="about" className="py-20 bg-academic-light-grey">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="section-title text-center mb-16 text-academic-navy">About Dr. Kedar</h2>
+          <h2 className="section-title text-center mb-16">About Dr. Kedar</h2>
           
           {/* First Row: Profile Image and Bio */}
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
@@ -36,28 +36,28 @@ const About = () => {
             {/* Bio Content */}
             <div className="space-y-6">
               <div className="prose prose-lg max-w-none">
-                <p className="text-academic-navy leading-relaxed">
+                <p className="text-foreground leading-relaxed">
                   Dr. Ashutosh Kedar is a distinguished researcher and expert in microwave engineering 
                   and antenna systems, with over <strong>20+ years of experience</strong> in advancing 
                   electromagnetic research for defense applications. He is a <strong>Life Fellow WAMSS</strong>, 
                   <strong>Fellow IETE</strong>, <strong>Senior Member IEEE</strong>, and <strong>Life Member ACES</strong>.
                 </p>
                 
-                <p className="text-academic-navy leading-relaxed">
+                <p className="text-foreground leading-relaxed">
                   His research focuses on innovative <strong>active phased array antennas</strong> and 
                   associated technologies. Dr. Kedar has contributed significantly to the field through 
                   his work on <strong>wide band wide scanning active phased array antennas</strong>, 
                   <strong>sparse antenna arrays</strong>, and <strong>T/R modules</strong>.
                 </p>
 
-                <p className="text-academic-navy leading-relaxed">
+                <p className="text-foreground leading-relaxed">
                   Currently serving as a <strong>Senior Scientist</strong> in Defence R & D Organization, 
                   Min. of Defence, Govt. of India (2003-till date), he leads activities related to 
                   wide band wide scanning active phased array antennas for radar applications and 
                   realization of new active array technologies within the country.
                 </p>
 
-                <p className="text-academic-navy leading-relaxed">
+                <p className="text-foreground leading-relaxed">
                   Leading activities related to wide band wide scanning active phased array antennas for radar applications. 
                   Design and development of state of the art technology related to wide band wide scanning sparse antenna arrays. 
                   Realization of new active array technologies like T/R modules, beamformers, antenna arrays, etc within country. 
@@ -124,25 +124,25 @@ const About = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-4 text-academic-navy">Professional Activities</h3>
                 <div className="space-y-2">
-                  <div className="text-sm text-academic-navy">
+                  <div className="text-sm text-foreground">
                     <strong>Chair,</strong> IEEE AP/MTT-S Jt. Chapter Bangalore 2025
                   </div>
-                  <div className="text-sm text-academic-navy">
+                  <div className="text-sm text-foreground">
                     <strong>Vice-Chair,</strong> IEEE AP/MTT-S Jt. Chapter Bangalore 2024
                   </div>
-                  <div className="text-sm text-academic-navy">
+                  <div className="text-sm text-foreground">
                     <strong>Secretary,</strong> IEEE AP/MTT-S Jt. Chapter Bangalore 2022-23
                   </div>
-                  <div className="text-sm text-academic-navy">
+                  <div className="text-sm text-foreground">
                     <strong>Execom Member,</strong> IEEE Bangalore Section, 2022 onwards
                   </div>
-                  <div className="text-sm text-academic-navy">
+                  <div className="text-sm text-foreground">
                     <strong>ExeCOM Member</strong> – MAPCON, WAMSS, IEEE Bangalore Section
                   </div>
-                  <div className="text-sm text-academic-navy">
+                  <div className="text-sm text-foreground">
                     <strong>Editor,</strong> IETE Journal of Research
                   </div>
-                  <div className="text-sm text-academic-navy">
+                  <div className="text-sm text-foreground">
                     <strong>Reviewer</strong> for IEEE TAP, IEEE Communication Magazine, IET Letters
                   </div>
                 </div>
