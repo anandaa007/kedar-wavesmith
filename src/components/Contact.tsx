@@ -13,7 +13,7 @@ const Contact = () => {
           
           <div className="flex justify-center">
             {/* Contact Information */}
-            <div className="space-y-8 flex flex-col items-center justify-center w-full">
+            <div className="space-y-4 flex flex-col items-center justify-center w-full">
               <div className="text-center">
                 <p className="text-foreground leading-relaxed mb-6">
                   I'm always open to discussing research collaborations, speaking opportunities, 
@@ -31,7 +31,7 @@ const Contact = () => {
                       </div>
                       <div className="text-center">
                         <div className="font-medium text-white">Email</div>
-                        <div className="text-white/80">ashutosh.kedar@institution.edu</div>
+                        <div className="text-white/80"></div>
                       </div>
                     </div>
                   </CardContent>
