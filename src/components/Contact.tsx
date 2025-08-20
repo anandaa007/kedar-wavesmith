@@ -15,7 +15,6 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8 flex flex-col items-center justify-center w-full">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-academic-navy mb-6">Get in Touch</h3>
                 <p className="text-foreground leading-relaxed mb-6">
                   I'm always open to discussing research collaborations, speaking opportunities, 
                   or consulting on microwave and antenna engineering projects. Feel free to reach out!
