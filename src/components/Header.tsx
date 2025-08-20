@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -20,7 +21,14 @@ const Header = () => {
     if (href.startsWith("#")) {
       // If we're not on the home page, navigate to home first then scroll
       if (location.pathname !== "/") {
-        window.location.href = "/" + href;
+        navigate("/");
+        // Use setTimeout to allow navigation to complete before scrolling
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 100);
         return;
       }
       const element = document.querySelector(href);
@@ -28,7 +36,7 @@ const Header = () => {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     } else {
-      window.location.href = href;
+      navigate(href);
     }
     setIsMenuOpen(false);
   };
@@ -37,9 +45,12 @@ const Header = () => {
       <header className="fixed w-full top-0 z-50 bg-[hsl(var(--academic-navy))]">      <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
-          <div className="font-bold text-xl text-white drop-shadow-lg">
+          <button 
+            onClick={() => navigate("/")}
+            className="font-bold text-xl text-white drop-shadow-lg hover:text-white/90 transition-colors"
+          >
             Dr. Ashutosh Kedar
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
