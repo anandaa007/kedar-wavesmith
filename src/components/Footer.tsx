@@ -50,7 +50,7 @@ const Footer = () => {
 
           <div className="border-t border-blue-800 mt-8 pt-8 text-center">
             <div className="text-sm text-blue-300">
-              © 2024 Dr. Ashutosh Kedar. All rights reserved.
+              © 2025 Dr. Ashutosh Kedar. All rights reserved.
             </div>
           </div>
         </div>
