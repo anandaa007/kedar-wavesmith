@@ -12,7 +12,6 @@ const Publications = () => {
       journal: "IEEE Transactions on Antennas and Propagation",
       year: "2025",
       volume: "vol. 73, no. 8, pp. 5637-5649",
-      impact: "High Impact",
       type: "Journal Article"
     },
     {
@@ -21,7 +20,6 @@ const Publications = () => {
       journal: "IEEE Transactions on Antennas and Propagation",
       year: "2023",
       volume: "vol. 71",
-      impact: "High Impact",
       type: "Journal Article"
     },
     {
@@ -30,7 +28,6 @@ const Publications = () => {
       journal: "IEEE Transactions on Antennas and Propagation",
       year: "2020",
       volume: "vol. 67, no.2, pp. 905-914",
-      impact: "High Impact",
       type: "Journal Article"
     },
     {
@@ -39,7 +36,6 @@ const Publications = () => {
       journal: "IEEE Transactions on Antennas and Propagation",
       year: "2019", 
       volume: "vol. 67, No.12, pp.7387-7395",
-      impact: "High Impact",
       type: "Journal Article"
     }
   ];
@@ -146,7 +142,7 @@ const Publications = () => {
                   <Card key={index} className="card-elevated text-center">
                     <CardContent className="p-6">
                       <div className="text-3xl font-bold text-academic-blue mb-2">{stat.number}</div>
-                      <div className="text-sm text-academic-grey font-medium">{stat.label}</div>
+                      <div className="text-sm text-white/80 font-medium">{stat.label}</div>
                     </CardContent>
                   </Card>
                 ))}
@@ -159,7 +155,7 @@ const Publications = () => {
         <section className="py-20 bg-academic-light-grey">
           <div className="container mx-auto px-4 lg:px-6">
             <div className="max-w-6xl mx-auto">
-              <h2 className="section-title text-center mb-16">Featured Journal Publications</h2>
+              <h2 className="section-title text-center mb-16">Journal Details</h2>
               <div className="space-y-6">
                 {featuredPublications.map((pub, index) => (
                   <Card key={index} className="card-elevated">
@@ -174,13 +170,6 @@ const Publications = () => {
                             <span className="font-medium">{pub.journal}</span> • {pub.volume} • {pub.year}
                           </div>
                           <div className="flex items-center space-x-4 text-xs">
-                            <span className={`px-2 py-1 rounded-full ${
-                              pub.impact === 'High Impact' ? 'bg-green-100 text-green-800' :
-                              pub.impact === 'Medium Impact' ? 'bg-blue-100 text-blue-800' :
-                              'bg-gray-100 text-gray-800'
-                            }`}>
-                              {pub.impact}
-                            </span>
                             <span className="flex items-center">
                               <FileText className="h-3 w-3 mr-1" />
                               {pub.type}
@@ -194,10 +183,6 @@ const Publications = () => {
                         <Button size="sm" className="text-xs">
                           <ExternalLink className="h-3 w-3 mr-1" />
                           View Paper
-                        </Button>
-                        <Button variant="outline" size="sm" className="text-xs">
-                          <FileText className="h-3 w-3 mr-1" />
-                          Citation
                         </Button>
                       </div>
                     </CardContent>
@@ -222,8 +207,8 @@ const Publications = () => {
                           <BookOpen className="h-6 w-6" />
                         </div>
                         <div className="flex-1">
-                          <CardTitle className="text-lg text-academic-navy">{book.title}</CardTitle>
-                          <div className="text-sm text-academic-grey">
+                          <CardTitle className="text-lg text-white">{book.title}</CardTitle>
+                          <div className="text-sm text-white/80">
                             {book.publisher} • {book.year}
                           </div>
                         </div>
@@ -233,7 +218,7 @@ const Publications = () => {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-foreground leading-relaxed mb-4">{book.description}</p>
+                      <p className="text-white/80 leading-relaxed mb-4">{book.description}</p>
                       <Button size="sm" className="text-xs">
                         <ExternalLink className="h-3 w-3 mr-1" />
                         View Publication
@@ -246,19 +231,19 @@ const Publications = () => {
           </div>
         </section>
 
-        {/* Recent Conference Papers */}
+        {/* Conferences/Symposiums */}
         <section className="py-20 bg-academic-light-grey">
           <div className="container mx-auto px-4 lg:px-6">
             <div className="max-w-6xl mx-auto">
-              <h2 className="section-title text-center mb-16">Recent Conference Papers</h2>
+              <h2 className="section-title text-center mb-16">Conferences/Symposiums</h2>
               <div className="space-y-4">
                 {recentConferences.map((conf, index) => (
                   <Card key={index} className="card-elevated">
                     <CardContent className="p-6">
                       <div className="flex flex-col md:flex-row md:items-start justify-between mb-3">
                         <div className="flex-1">
-                          <h4 className="text-lg font-semibold text-academic-navy mb-1">{conf.title}</h4>
-                          <div className="text-academic-grey text-sm">
+                          <h4 className="text-lg font-semibold text-white mb-1">{conf.title}</h4>
+                          <div className="text-white/80 text-sm">
                             <span className="font-medium">{conf.conference}</span> • {conf.location} • {conf.year}
                           </div>
                         </div>
@@ -286,9 +271,9 @@ const Publications = () => {
                       <div className="mb-4">
                         <Award className="h-8 w-8 text-academic-blue mx-auto" />
                       </div>
-                      <h4 className="font-semibold text-academic-navy mb-2">{role.role}</h4>
-                      <p className="text-sm text-academic-grey mb-2">{role.journal}</p>
-                      <p className="text-xs text-academic-grey">{role.period}</p>
+                      <h4 className="font-semibold text-white mb-2">{role.role}</h4>
+                      <p className="text-sm text-white/80 mb-2">{role.journal}</p>
+                      <p className="text-xs text-white/80">{role.period}</p>
                     </CardContent>
                   </Card>
                 ))}

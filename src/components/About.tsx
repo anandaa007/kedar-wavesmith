@@ -17,7 +17,7 @@ const About = () => {
     <section id="about" className="py-20 bg-academic-light-grey">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="section-title text-center mb-16">About Dr. Kedar</h2>
+          <h2 className="section-title text-center mb-16">About Dr. Ashutosh Kedar</h2>
           
           {/* First Row: Profile Image and Bio */}
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
@@ -27,9 +27,9 @@ const About = () => {
                 <img
                   src={profilePhoto}
                   alt="Dr. Ashutosh Kedar - Speaker"
-                  className="w-80 h-80 object-cover rounded-2xl shadow-strong"
+                  className="w-80 h-80 object-cover rounded-full shadow-strong"
                 />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-academic-blue/20 to-transparent"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-academic-blue/20 to-transparent"></div>
               </div>
             </div>
 
@@ -73,24 +73,24 @@ const About = () => {
             {/* Education */}
             <Card className="card-elevated">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4 text-academic-navy">Education</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Education</h3>
                 <div className="space-y-3">
                   <div>
-                    <div className="font-medium text-academic-navy">Ph.D. in Electronic Science</div>
-                    <div className="text-academic-grey">University of Delhi South Campus</div>
-                    <div className="text-sm text-academic-grey">Computer Aided Study of High Temperature Superconducting Microwave Components using Full Wave solvers</div>
+                    <div className="font-medium text-white">Ph.D. in Electronic Science</div>
+                    <div className="text-white/80">University of Delhi South Campus</div>
+                    <div className="text-sm text-white/80">Computer Aided Study of High Temperature Superconducting Microwave Components using Full Wave solvers</div>
                   </div>
                   <div>
-                    <div className="font-medium text-academic-navy">M.Tech. in Microwave Electronics</div>
-                    <div className="text-academic-grey">University of Delhi South Campus</div>
+                    <div className="font-medium text-white">M.Tech. in Microwave Electronics</div>
+                    <div className="text-white/80">University of Delhi South Campus</div>
                   </div>
                   <div>
-                    <div className="font-medium text-academic-navy">M.Sc. in Physics</div>
-                    <div className="text-academic-grey">University of Delhi</div>
+                    <div className="font-medium text-white">M.Sc. in Physics</div>
+                    <div className="text-white/80">University of Delhi</div>
                   </div>
                   <div>
-                    <div className="font-medium text-academic-navy">B.Sc. (Hons.) Physics</div>
-                    <div className="text-academic-grey">University of Delhi</div>
+                    <div className="font-medium text-white">B.Sc. (Hons.) Physics</div>
+                    <div className="text-white/80">University of Delhi</div>
                   </div>
                 </div>
               </CardContent>
@@ -124,25 +124,25 @@ const About = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-4 text-academic-navy">Professional Activities</h3>
                 <div className="space-y-2">
-                  <div className="text-sm text-foreground">
+                  <div className="text-sm text-white">
                     <strong>Chair,</strong> IEEE AP/MTT-S Jt. Chapter Bangalore 2025
                   </div>
-                  <div className="text-sm text-foreground">
+                  <div className="text-sm text-white">
                     <strong>Vice-Chair,</strong> IEEE AP/MTT-S Jt. Chapter Bangalore 2024
                   </div>
-                  <div className="text-sm text-foreground">
+                  <div className="text-sm text-white">
                     <strong>Secretary,</strong> IEEE AP/MTT-S Jt. Chapter Bangalore 2022-23
                   </div>
-                  <div className="text-sm text-foreground">
+                  <div className="text-sm text-white">
                     <strong>Execom Member,</strong> IEEE Bangalore Section, 2022 onwards
                   </div>
-                  <div className="text-sm text-foreground">
+                  <div className="text-sm text-white">
                     <strong>ExeCOM Member</strong> – MAPCON, WAMSS, IEEE Bangalore Section
                   </div>
-                  <div className="text-sm text-foreground">
+                  <div className="text-sm text-white">
                     <strong>Editor,</strong> IETE Journal of Research
                   </div>
-                  <div className="text-sm text-foreground">
+                  <div className="text-sm text-white">
                     <strong>Reviewer</strong> for IEEE TAP, IEEE Communication Magazine, IET Letters
                   </div>
                 </div>

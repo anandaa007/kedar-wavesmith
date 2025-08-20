@@ -32,25 +32,7 @@ const Research = () => {
     }
   ];
 
-  const currentProjects = [
-    {
-      title: "Multi-Band Phased Array Antenna System",
-      status: "Ongoing",
-      description: "Development of a revolutionary multi-band phased array system for next-generation radar applications."
-    },
-    {
-      title: "Metamaterial-Enhanced Communication Arrays",
-      status: "In Review",
-      description: "Novel metamaterial structures for improving gain and directivity in satellite communication systems."
-    },
-    {
-      title: "AI-Driven Antenna Optimization",
-      status: "Completed",
-      description: "Machine learning approaches to optimize antenna parameters for specific application requirements."
-    }
-  ];
-
-  const researchInterests = [
+    const researchInterests = [
     "Wide band wide scanning active phased array antennas for radar applications",
     "Design and development of state of the art technology related to wide band wide scanning sparse antenna arrays",
     "Realization of new active array technologies like T/R modules, beamformers, antenna arrays",
@@ -103,7 +85,7 @@ const Research = () => {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-foreground mb-4 leading-relaxed">
+                      <p className="text-white mb-4 leading-relaxed">
                         {area.description}
                       </p>
                       <div className="flex flex-wrap gap-2">
@@ -134,7 +116,7 @@ const Research = () => {
                   <CardContent>
                     <ul className="space-y-3">
                       {researchInterests.map((interest, index) => (
-                        <li key={index} className="flex items-start text-foreground">
+                        <li key={index} className="flex items-start text-white">
                           <div className="w-2 h-2 bg-academic-blue rounded-full mr-3 mt-2 flex-shrink-0"></div>
                           <span className="text-sm leading-relaxed">{interest}</span>
                         </li>
@@ -188,39 +170,11 @@ const Research = () => {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-foreground mb-4 leading-relaxed">{patent.description}</p>
+                      <p className="text-white mb-4 leading-relaxed">{patent.description}</p>
                       <Button size="sm" className="text-xs">
                         <FileText className="h-3 w-3 mr-1" />
                         View Patent Details
                       </Button>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Current Projects */}
-        <section className="py-20 bg-academic-light-grey">
-          <div className="container mx-auto px-4 lg:px-6">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="section-title text-center mb-16">Current Projects</h2>
-              <div className="grid gap-6">
-                {currentProjects.map((project, index) => (
-                  <Card key={index} className="card-elevated">
-                    <CardContent className="p-6">
-                      <div className="flex flex-col md:flex-row md:items-center justify-between mb-3">
-                        <h4 className="text-lg font-semibold text-academic-navy">{project.title}</h4>
-                        <span className={`text-sm px-3 py-1 rounded-full font-medium ${
-                          project.status === 'Ongoing' ? 'bg-blue-100 text-blue-800' :
-                          project.status === 'In Review' ? 'bg-yellow-100 text-yellow-800' :
-                          'bg-green-100 text-green-800'
-                        }`}>
-                          {project.status}
-                        </span>
-                      </div>
-                      <p className="text-foreground">{project.description}</p>
                     </CardContent>
                   </Card>
                 ))}
